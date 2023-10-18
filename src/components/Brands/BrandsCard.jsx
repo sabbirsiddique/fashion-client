@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
+
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const BrandsCard = ({ brands }) => {
   const {
+    _id,
     imgUrl,
     brandName,
     name,
@@ -14,6 +18,8 @@ const BrandsCard = ({ brands }) => {
   } = brands;
   return (
     <div>
+      <Link to={`/brandinfo/${_id}`}>
+
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img src={imgUrl} className="rounded-xl" />
@@ -24,6 +30,7 @@ const BrandsCard = ({ brands }) => {
           </div>
         </div>
       </div>
+      </Link>
     </div>
   );
 };

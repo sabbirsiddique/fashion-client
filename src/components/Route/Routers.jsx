@@ -3,6 +3,7 @@ import App from "../../App";
 import Home from "../pages/Home";
 import Addproduct from "../pages/Addproduct";
 import Mycart from "../pages/Mycart";
+import SelectedBrand from "../SelectedBrand/SelectedBrand";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
         {
             path:"/mycart",
             element:<Mycart></Mycart>
+        },
+        {
+          path:"/brandinfo/:_id",
+          element: <SelectedBrand></SelectedBrand>,
+          loader: ()=>fetch("http://localhost:5000/brands")
+
         }
     ]
   },
