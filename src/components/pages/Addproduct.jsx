@@ -1,3 +1,6 @@
+import Swal from "sweetalert2";
+
+
 const Addproduct = () => {
   const handleAdd = (event) => {
     event.preventDefault();
@@ -18,7 +21,7 @@ const Addproduct = () => {
 
     const rating = form.rating.value;
 
-    const newCoffee = {
+    const productAdded = {
       imgUrl,
       brandName,
       name,
@@ -27,15 +30,35 @@ const Addproduct = () => {
       shdetails,
       description,
       price,
-      rating,
+      rating
     };
 
-    console.log(newCoffee);
+    console.log(productAdded);
+
+    fetch('http://localhost:5000/brands',{
+      method: 'POST',
+      headers: {
+          'Content-Type':'application/json',
+      },
+      body: JSON.stringify(productAdded)
+  })
+      .then(res=>res.json())
+      .then(data =>{
+          console.log(data)
+          if(data.insertedId){
+            Swal.fire(
+                'Good job!',
+                'Product added successfully',
+                'success'
+              )
+        }
+          
+      })
   };
 
   return (
     <div className="bg-[#e1d5b0] p-24">
-      <h2>Add Coffee</h2>
+      <h2>Add Product</h2>
       <form onSubmit={handleAdd}>
         {/* 1st row */}
         <div className="flex">

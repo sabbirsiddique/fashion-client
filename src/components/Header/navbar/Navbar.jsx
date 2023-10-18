@@ -1,8 +1,8 @@
-import {NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <div>
+  return (
+    <div>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -62,13 +62,10 @@ const Navbar = () => {
               >
                 My Cart
               </NavLink>
-              
-            
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-4xl font-bold">
-            <span className="text-[#ee514b]">Wed</span>
-            <span className="text-[#F9B232]">Vibes</span>
+          <a className="normal-case text-4xl font-bold">
+            <img src="https://i.ibb.co/NKtVP5f/inkpx-word-art-1.jpg" className="cursor-pointer" alt="" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -109,14 +106,10 @@ const Navbar = () => {
             >
               My Cart
             </NavLink>
-           
-            
           </ul>
         </div>
         <div className="navbar-end">
-
-            
-        {/* split('@')[0].replace(/\d/g, '').toUpperCase() */}
+          {/* split('@')[0].replace(/\d/g, '').toUpperCase() */}
           {/* {
             user? 
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -143,12 +136,12 @@ const Navbar = () => {
           }
           */}
           <button className="btn text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
-              Login
-            </button>
+            Login
+          </button>
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Navbar;
