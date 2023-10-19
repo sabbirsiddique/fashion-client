@@ -12,9 +12,9 @@
 
 - A new user have to register first **"createUserWithEmailAndPassword"** ensures it
 
-3. **Servise Details:**
+3. **Brands/Product Details:**
 
-- On home page user can see 6 different wedding services with a button **DETAILS**. This is button will redirect user to the **Login** if he/she try to see service details.
+- On home page user can see 6 different brand name . This is button(Brand name work as button) will redirect user to the **Login** if he/she try to see service details.
 
 4. **Username and Profile pic and sweet alert:**
 
