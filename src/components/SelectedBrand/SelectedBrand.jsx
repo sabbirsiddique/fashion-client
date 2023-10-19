@@ -3,22 +3,9 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import SelectedBrandCard from "./SelectedBrandCard";
 
-// import { useLoaderData } from "react-router-dom";
+
 
 const SelectedBrand = () => {
-  // const brandInfo = useLoaderData();
-  // const {
-  //     _id,
-  //     imgUrl,
-  //     brandName,
-  //     name,
-  //     type,
-  //     productImg,
-  //     shdetails,
-  //     description,
-  //     price,
-  //     rating
-  //   } = brandInfo || {};
 
   const [selectedBrand, setSelectedBrand] = useState({});
   const { _id } = useParams();
