@@ -159,12 +159,7 @@ const Navbar = () => {
           </Link>
           }
          
-          {/* <Link to="/login">
-
-          <button className="btn text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
-            Login
-          </button>
-          </Link> */}
+          
         </div>
       </div>
     </div>
