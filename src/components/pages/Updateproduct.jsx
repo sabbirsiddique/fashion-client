@@ -66,8 +66,8 @@ const Updateproduct = () => {
   };
 
   return (
-    <div className="bg-[#e1d5b0] p-24">
-      <h2>Update Product</h2>
+    <div className="bg-[url('https://i.ibb.co/5M6tVjz/cool-background-1.jpg')] p-24">
+      <h2 className=" text-3xl font-bold text-center mb-3">Update Product</h2>
       <form onSubmit={handleUpdate}>
         {/* 1st row */}
         <div className="flex">

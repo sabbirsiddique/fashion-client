@@ -22,6 +22,9 @@ const Details = () => {
           <Link to="/mycart">
             <button className="mt-10 btn-info p-3 rounded-md font-bold bg-sky-200">Add to Cart</button>
           </Link>
+          <Link to="/mycart">
+            <button className="mt-10 ml-4 btn-info p-3 rounded-md font-bold bg-sky-200">Delete</button>
+          </Link>
         </div>
         <div className="hover:scale-105 transition duration-700">
           <img src="https://i.ibb.co/vLPNnpf/tshirt.jpg" className="rounded-full" />

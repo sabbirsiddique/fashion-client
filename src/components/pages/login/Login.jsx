@@ -63,7 +63,7 @@ const Login = () => {
             <form onSubmit={handleLogin} className="card-body">
                 
               <div className="form-control">
-                <h1>Please Login</h1>
+                <h1 className="text-3xl font-bold text-center mb-3">Please Login</h1>
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>

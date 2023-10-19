@@ -59,7 +59,7 @@ const Addproduct = () => {
   return (
     <div className="bg-[url('https://i.ibb.co/QHGXCvH/bg.jpg')] p-24">
       <div>
-      <h2>Add Product</h2>
+      <h2 className="text-3xl font-bold text-center mb-3">Add Product</h2>
       <form onSubmit={handleAdd}>
         {/* 1st row */}
         <div className="flex">

@@ -3,13 +3,24 @@ import Banner from "../Header/banner/Banner";
 import Brands from "../Brands/Brands";
 import Stats from "./Stats";
 import Accordion from "../accordion/Accordion";
+import { useState } from "react";
+import "./styless/home.css"
 
 const Home = () => {
 
     const brandss = useLoaderData();
 
+    const[isDark, setDark]=useState(false);
+
+    const toggleTheme = ()=>{
+        setDark(!isDark);
+    }
+
+    const themeClass = isDark ? "dark" : "light";
+
     return (
-        <div>
+        <div className={`bg-${themeClass}-bg text-${themeClass}-text`}>
+            <button onClick={toggleTheme}>Toogle theme</button>
 
             <div>
             <Banner></Banner>
