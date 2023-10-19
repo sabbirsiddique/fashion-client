@@ -54,7 +54,10 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           <div className="card-body items-center text-center">
             <div className="card-actions">
               
+            <Link to={`/details/${_id}`}>
+
             <button className="btn btn-primary">DETAILS</button>
+            </Link>
 
             <Link to={`/updatepro/${_id}`}>
             <button className="btn btn-primary">UPDATE</button>
@@ -77,7 +80,10 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           </div>
           <div className="card-body items-center text-center">
             <div className="card-actions">
+            <Link to={`/details/${_id}`}>
+
             <button className="btn btn-primary">DETAILS</button>
+            </Link>
             <Link to={`/updatepro/${_id}`}>
             <button className="btn btn-primary">UPDATE</button>
             </Link>
@@ -98,7 +104,10 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           </div>
           <div className="card-body items-center text-center">
             <div className="card-actions">
+            <Link to={`/details/${_id}`}>
+
             <button className="btn btn-primary">DETAILS</button>
+            </Link>
             <Link to={`/updatepro/${_id}`}>
             <button className="btn btn-primary">UPDATE</button>
             </Link>
@@ -119,7 +128,10 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           </div>
           <div className="card-body items-center text-center">
             <div className="card-actions">
-              <button className="btn btn-primary">DETAILS</button>
+              <Link to={`/details/${_id}`}>
+
+            <button className="btn btn-primary">DETAILS</button>
+            </Link>
               <Link to={`/updatepro/${_id}`}>
             <button className="btn btn-primary">UPDATE</button>
             </Link>
