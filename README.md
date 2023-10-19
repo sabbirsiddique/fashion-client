@@ -1,6 +1,6 @@
 ## Website name: WedVibes ##
 
-*Live link* : [DressCharm](https://social-event-36b66.web.app)
+*Live link* : [DressCharm]([https://social-event-36b66.web.app](https://fashion-apparel-f2b82.web.app/))
 
 ### here I highlight about my website in 5 bullet points as Features you can enjoy: ###
 
