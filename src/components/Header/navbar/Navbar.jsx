@@ -1,6 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../pages/providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+
+  const {user,logOut} = useContext(AuthContext);
+
+  const handleLogOut=()=>{
+      logOut()
+      // eslint-disable-next-line no-unused-vars
+      .then(res=>{
+        Swal.fire(
+          'Good job!',
+          'You are logged out!',
+          'success'
+        )
+      })
+      .catch()
+  }
+
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -65,7 +85,11 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="normal-case text-4xl font-bold">
-            <img src="https://i.ibb.co/NKtVP5f/inkpx-word-art-1.jpg" className="cursor-pointer" alt="" />
+            <img
+              src="https://i.ibb.co/NKtVP5f/inkpx-word-art-1.jpg"
+              className="cursor-pointer"
+              alt=""
+            />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -110,7 +134,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {/* split('@')[0].replace(/\d/g, '').toUpperCase() */}
-          {/* {
+          {
             user? 
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
@@ -118,11 +142,11 @@ const Navbar = () => {
             </div>
           </label>
           :""
-          } */}
-          {/* {
+          }
+          {
               user && <span className="mr-2">{user.email.split('@')[0].replace(/\d/g, '').toUpperCase()}</span>
-            } */}
-          {/* {
+            }
+          {
             user?
             <button onClick={handleLogOut} className="btn text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
               Logout
@@ -134,10 +158,13 @@ const Navbar = () => {
             </button>
           </Link>
           }
-          */}
+         
+          {/* <Link to="/login">
+
           <button className="btn text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
             Login
           </button>
+          </Link> */}
         </div>
       </div>
     </div>
