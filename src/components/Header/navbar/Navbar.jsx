@@ -4,22 +4,16 @@ import { AuthContext } from "../../pages/providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
 
-  const {user,logOut} = useContext(AuthContext);
-
-  const handleLogOut=()=>{
-      logOut()
+  const handleLogOut = () => {
+    logOut()
       // eslint-disable-next-line no-unused-vars
-      .then(res=>{
-        Swal.fire(
-          'Good job!',
-          'You are logged out!',
-          'success'
-        )
+      .then((res) => {
+        Swal.fire("Good job!", "You are logged out!", "success");
       })
-      .catch()
-  }
-
+      .catch();
+  };
 
   return (
     <div>
@@ -52,7 +46,7 @@ const Navbar = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-[2px] text-white rounded text-lg font-bold"
+                    ? "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-[2px] text-white rounded text-lg font-bold"
                     : ""
                 }
               >
@@ -64,7 +58,7 @@ const Navbar = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-[2px] text-white rounded text-lg font-bold"
+                    ? "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-[2px] text-white rounded text-lg font-bold"
                     : ""
                 }
               >
@@ -76,7 +70,7 @@ const Navbar = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-[2px] text-white rounded text-lg font-bold"
+                    ? "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-[2px] text-white rounded text-lg font-bold"
                     : ""
                 }
               >
@@ -87,7 +81,7 @@ const Navbar = () => {
           <a className="normal-case text-4xl font-bold">
             <img
               src="https://i.ibb.co/NKtVP5f/inkpx-word-art-1.jpg"
-              className="cursor-pointer"
+              className="cursor-pointer bg-[#547097]"
               alt=""
             />
           </a>
@@ -100,7 +94,7 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-[2px] text-white rounded text-lg font-bold"
+                  ? "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-[2px] text-white rounded text-lg font-bold"
                   : ""
               }
             >
@@ -112,7 +106,7 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-[2px] text-white rounded text-lg font-bold"
+                  ? "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-[2px] text-white rounded text-lg font-bold"
                   : ""
               }
             >
@@ -124,7 +118,7 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-[2px] text-white rounded text-lg font-bold"
+                  ? "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-[2px] text-white rounded text-lg font-bold"
                   : ""
               }
             >
@@ -134,32 +128,34 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {/* split('@')[0].replace(/\d/g, '').toUpperCase() */}
-          {
-            user? 
+          {user ? (
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src="https://i.ibb.co/g7Vwd0R/user-1.png" />
-            </div>
-          </label>
-          :""
-          }
-          {
-              user && <span className="mr-2">{user.email.split('@')[0].replace(/\d/g, '').toUpperCase()}</span>
-            }
-          {
-            user?
-            <button onClick={handleLogOut} className="btn text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
+              <div className="w-10 rounded-full">
+                <img src="https://i.ibb.co/g7Vwd0R/user-1.png" />
+              </div>
+            </label>
+          ) : (
+            ""
+          )}
+          {user && (
+            <span className="mr-2">
+              {user.email.split("@")[0].replace(/\d/g, "").toUpperCase()}
+            </span>
+          )}
+          {user ? (
+            <button
+              onClick={handleLogOut}
+              className="btn text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+            >
               Logout
             </button>
-            :
+          ) : (
             <Link to="/login">
-            <button className="btn text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
-              Login
-            </button>
-          </Link>
-          }
-         
-          
+              <button className="btn text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

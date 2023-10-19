@@ -57,7 +57,8 @@ const Addproduct = () => {
   };
 
   return (
-    <div className="bg-[#e1d5b0] p-24">
+    <div className="bg-[url('https://i.ibb.co/QHGXCvH/bg.jpg')] p-24">
+      <div>
       <h2>Add Product</h2>
       <form onSubmit={handleAdd}>
         {/* 1st row */}
@@ -217,6 +218,7 @@ const Addproduct = () => {
           className="btn btn-block mt-5"
         />
       </form>
+      </div>
     </div>
   );
 };

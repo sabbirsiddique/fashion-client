@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Details = () => {
   return (
-    <div className="max-w-full h-screen mx-auto bg-gradient-to-r from-red-100 via-orange-100 to-yellow-100">
+    <div className="max-w-full h-screen mx-auto bg-gradient-to-r from-green-400 to-blue-500">
       <div className="max-w-screen-2xl flex justify-center items-center mx-auto p-5"></div>
       <div className="flex justify-center items-center font-rubik gap-40 mt-10">
         <div data-aos="fade-up">

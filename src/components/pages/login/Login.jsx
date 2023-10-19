@@ -57,9 +57,9 @@ const Login = () => {
 
     return (
         <div>
-      <div className="hero min-h-screen bg-gradient-to-r from-red-200 via-orange-200 to-yellow-200">
+      <div className="hero min-h-screen bg-gradient-to-r from-green-200 to-blue-400">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div data-aos="fade-down" className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-transparent">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-transparent">
             <form onSubmit={handleLogin} className="card-body">
                 
               <div className="form-control">
@@ -97,7 +97,7 @@ const Login = () => {
                 </Link>
               </p>
               <div className="form-control mt-6 gap-5">
-                <button className="btn btn-primary bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
+                <button className="btn btn-primary bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
                   Login
                 </button>
                 <button onClick={handleGoogleSignin} className="btn btn-primary bg-gradient-to-r from-green-400 via-blue-500 to-yellow-400">
