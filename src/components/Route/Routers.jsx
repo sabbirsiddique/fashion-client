@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Addproduct from "../pages/Addproduct";
 import Mycart from "../pages/Mycart";
 import SelectedBrand from "../SelectedBrand/SelectedBrand";
+import Updateproduct from "../pages/Updateproduct";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,13 @@ const router = createBrowserRouter([
           element: <SelectedBrand></SelectedBrand>,
           loader: ()=>fetch("http://localhost:5000/brands")
 
+        },
+        {
+          path:"/updatepro/:id",
+          element:<Updateproduct></Updateproduct>,
+          loader:({params})=>fetch(`http://localhost:5000/brands/${params.id}`),
         }
+
     ]
   },
 ]);

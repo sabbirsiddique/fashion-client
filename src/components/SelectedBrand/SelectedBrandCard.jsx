@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 const SelectedBrandCard = ({ selectedBrand }) => {
   const {
     _id,
@@ -53,7 +55,11 @@ const SelectedBrandCard = ({ selectedBrand }) => {
             <div className="card-actions">
               
             <button className="btn btn-primary">DETAILS</button>
-              <button className="btn btn-primary">UPDATE</button>
+
+            <Link to={`/updatepro/${_id}`}>
+            <button className="btn btn-primary">UPDATE</button>
+            </Link>
+              
             </div>
           </div>
         </div>
@@ -72,7 +78,9 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           <div className="card-body items-center text-center">
             <div className="card-actions">
             <button className="btn btn-primary">DETAILS</button>
-              <button className="btn btn-primary">UPDATE</button>
+            <Link to={`/updatepro/${_id}`}>
+            <button className="btn btn-primary">UPDATE</button>
+            </Link>
             </div>
           </div>
         </div>
@@ -91,7 +99,9 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           <div className="card-body items-center text-center">
             <div className="card-actions">
             <button className="btn btn-primary">DETAILS</button>
-              <button className="btn btn-primary">UPDATE</button>
+            <Link to={`/updatepro/${_id}`}>
+            <button className="btn btn-primary">UPDATE</button>
+            </Link>
             </div>
           </div>
         </div>
@@ -110,7 +120,9 @@ const SelectedBrandCard = ({ selectedBrand }) => {
           <div className="card-body items-center text-center">
             <div className="card-actions">
               <button className="btn btn-primary">DETAILS</button>
-              <button className="btn btn-primary">UPDATE</button>
+              <Link to={`/updatepro/${_id}`}>
+            <button className="btn btn-primary">UPDATE</button>
+            </Link>
             </div>
           </div>
         </div>
