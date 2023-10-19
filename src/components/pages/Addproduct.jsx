@@ -35,7 +35,7 @@ const Addproduct = () => {
 
     console.log(productAdded);
 
-    fetch('http://localhost:5000/brands',{
+    fetch('https://dresscharm-server.vercel.app/brands',{
       method: 'POST',
       headers: {
           'Content-Type':'application/json',

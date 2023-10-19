@@ -49,7 +49,7 @@ const Updateproduct = () => {
 
     console.log(updatedProduct);
 
-    fetch(`http://localhost:5000/brands/${_id}`, {
+    fetch(`https://dresscharm-server.vercel.app/brands/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

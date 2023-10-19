@@ -9,53 +9,73 @@ import Details from "../pages/Details";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import PriveateRouter from "./PrivateRouter";
-import ErrorPage from "../pages/errorpage/ErrorPage";
+// import ErrorPage from "../pages/errorpage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    errorElement: <ErrorPage></ErrorPage>,
+    // errorElement: <ErrorPage></ErrorPage>,
     children: [
-        {
-            path:"/",
-            element: <Home></Home>,
-            loader: ()=>fetch('http://localhost:5000/brands'),
-        },
-        {
-            path:"/addproduct",
-            element:<PriveateRouter><Addproduct></Addproduct></PriveateRouter>,
-        },
-        {
-            path:"/mycart",
-            element:<PriveateRouter><Mycart></Mycart></PriveateRouter>
-        },
-        {
-          path:"/brandinfo/:_id",
-          element: <PriveateRouter><SelectedBrand></SelectedBrand></PriveateRouter>,
-          loader: ()=>fetch("http://localhost:5000/brands")
-
-        },
-        {
-          path:"/updatepro/:id",
-          element:<PriveateRouter><Updateproduct></Updateproduct></PriveateRouter>,
-          loader:({params})=>fetch(`http://localhost:5000/brands/${params.id}`),
-        },
-        {
-          path:"/details/:id",
-          element:<PriveateRouter><Details></Details></PriveateRouter>,
-          loader:({params})=>fetch(`http://localhost:5000/brands/${params.id}`),
-        },
-        {
-          path:"/login",
-          element: <Login></Login>
-        },
-        {
-          path:"/register",
-          element: <Register></Register>
-        }
-
-    ]
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("https://dresscharm-server.vercel.app/brands"),
+      },
+      {
+        path: "/addproduct",
+        element: (
+          <PriveateRouter>
+            <Addproduct></Addproduct>
+          </PriveateRouter>
+        ),
+      },
+      {
+        path: "/mycart",
+        element: (
+          <PriveateRouter>
+            <Mycart></Mycart>
+          </PriveateRouter>
+        ),
+      },
+      {
+        path: "/brandinfo/:_id",
+        element: (
+          <PriveateRouter>
+            <SelectedBrand></SelectedBrand>
+          </PriveateRouter>
+        ),
+        loader: () => fetch("https://dresscharm-server.vercel.app/brands"),
+      },
+      {
+        path: "/updatepro/:id",
+        element: (
+          <PriveateRouter>
+            <Updateproduct></Updateproduct>
+          </PriveateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://dresscharm-server.vercel.app/brands/${params.id}`),
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PriveateRouter>
+            <Details></Details>
+          </PriveateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://dresscharm-server.vercel.app/brands/${params.id}`),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+    ],
   },
 ]);
 
